@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MainScreen(), // Ana ekranı MainScreen yap
+      home: MainScreen(), 
       debugShowCheckedModeBanner: false,
     );
   }
