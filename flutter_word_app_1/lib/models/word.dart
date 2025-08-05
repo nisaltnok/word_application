@@ -1,10 +1,10 @@
 class Word {
-  final int? id; // SQFLite için nullable id
+  final int? id; 
   final String englishWord;
   final String turkishWord;
   final String wordType;
   final String? story;
-  final String? imageBytes; // SQFLite'da String (Base64) olarak saklayacağız
+  final String? imageBytes;
   final bool isLearned;
   final String? createdAt;
 
@@ -19,7 +19,7 @@ class Word {
     this.createdAt,
   });
 
-  // Map'ten Word objesi oluştur (SQFLite'dan veri okurken) - EKSİK OLAN METOD
+ 
   factory Word.fromMap(Map<String, dynamic> map) {
     return Word(
       id: map['id'] as int?,
@@ -33,7 +33,7 @@ class Word {
     );
   }
 
-  // Word objesini Map'e çevir (SQFLite'a veri yazarken) - EKSİK OLAN METOD
+  
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -42,12 +42,12 @@ class Word {
       'word_type': wordType,
       'story': story,
       'image_bytes': imageBytes,
-      'is_learned': isLearned ? 1 : 0, // boolean'ı int'e çeviriyoruz
+      'is_learned': isLearned ? 1 : 0,
       'created_at': createdAt ?? DateTime.now().toIso8601String(),
     };
   }
 
-  // Copy with metodu (güncellemeler için)
+ 
   Word copyWith({
     int? id,
     String? englishWord,
